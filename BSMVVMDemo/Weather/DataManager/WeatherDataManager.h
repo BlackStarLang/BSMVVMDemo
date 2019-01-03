@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+@class WeatherModel;
+
 @interface WeatherDataManager : NSObject
+
+-(void)getWeatherDataWithCityName:(NSString *)cityName weahtherBlock:(void(^)(WeatherModel *weatherModel,NSString *errorMsg))block;
+
 
 @end

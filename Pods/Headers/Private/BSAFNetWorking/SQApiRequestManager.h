@@ -1,0 +1,1 @@
+../../../BSAFNetWorking/BSAFNetWorking/SQBaseApi/BSApi/SQApiRequestManager.h

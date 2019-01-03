@@ -12,12 +12,14 @@
 /*View*/
 
 /*Model*/
+#import "WeatherDataManager.h"
 
 @interface WeatherViewController ()
 
 /*view*/
 
 /*model*/
+@property (nonatomic,strong) WeatherDataManager *dataManager;
 
 @end
 
@@ -49,7 +51,15 @@
 #pragma mark - Network
 //主网络
 - (void)requestData{
-    
+//    __weak typeof(self)weakSelf = self;
+    [self.dataManager getWeatherDataWithCityName:@"beijing" weahtherBlock:^(WeatherModel *weatherModel, NSString *errorMsg) {
+       
+        if (errorMsg) {
+            NSLog(@"获取天气失败");
+        }else{
+            
+        }
+    }];
 }
 
 #pragma mark - Private
@@ -76,5 +86,11 @@
 
 #pragma mark - Lazy
 
+-(WeatherDataManager*)dataManager{
+    if (!_dataManager) {
+        _dataManager = [[WeatherDataManager alloc]init];
+    }
+    return _dataManager;
+}
 
 @end
