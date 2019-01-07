@@ -14,7 +14,10 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - BSAFNetWorking (0.0.2):
+  - BSAFNetWorking (0.0.4):
+    - AFNetworking (~> 3.0)
+    - BSAFNetWorking/BSApi (= 0.0.4)
+  - BSAFNetWorking/BSApi (0.0.4):
     - AFNetworking (~> 3.0)
 
 DEPENDENCIES:
@@ -27,7 +30,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  BSAFNetWorking: 97f15313bd875f64951a39fe0be66be500d40ed2
+  BSAFNetWorking: 15bd97e59ad8cc6505bb9da39fc31d8b78a04534
 
 PODFILE CHECKSUM: 06f052bf7252c4ae067888f16d559f992fa57ba6
 

@@ -21,7 +21,22 @@
     [manager startRequestWithSuccess:^(SQApiResponse *response) {
         
         NSLog(@"天气信息：%@",response.responseObject);
+        
+        /*
+         这里可以直接用yymodel 生成，
+         demo没有导入yymodel ，所以这里手动转模型
+         */
         WeatherModel *model = [[WeatherModel alloc]init];
+        model.city = response.responseObject[@"city"];
+       
+        NSMutableArray *mutArr = [NSMutableArray array];
+        for (NSDictionary *dic  in response.responseObject[@"forecast"]) {
+            WeatherItemModel *itemModel = [[WeatherItemModel alloc]init];
+            [itemModel setValuesForKeysWithDictionary:dic];
+            [mutArr addObject:itemModel];
+        }
+        model.forecast = mutArr;
+        self.weatherModel = model;
         
         block(model,nil);
         

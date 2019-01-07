@@ -11,3 +11,7 @@
 @implementation WeatherModel
 
 @end
+
+@implementation WeatherItemModel
+
+@end

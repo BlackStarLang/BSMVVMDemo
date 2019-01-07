@@ -15,6 +15,9 @@
 		3056E48721DC8E7A008AEAF5 /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3056E48621DC8E7A008AEAF5 /* WeatherViewController.m */; };
 		3056E48D21DC8F5D008AEAF5 /* WeatherDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3056E48C21DC8F5D008AEAF5 /* WeatherDataManager.m */; };
 		3056E4C521DDF3FB008AEAF5 /* WeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3056E4C421DDF3FB008AEAF5 /* WeatherModel.m */; };
+		3056E4C821DE1238008AEAF5 /* WeatherHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3056E4C721DE1238008AEAF5 /* WeatherHeaderView.m */; };
+		3056E4CB21DE124F008AEAF5 /* WeatherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3056E4CA21DE124F008AEAF5 /* WeatherTableViewCell.m */; };
+		3056E4CE21DE15FC008AEAF5 /* WeatherViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3056E4CD21DE15FC008AEAF5 /* WeatherViewModel.m */; };
 		975C3A66D4D8EF80AEC78B1B /* libPods-BSMVVMDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2DE2C655F6E4120EF5E4EAE /* libPods-BSMVVMDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +37,12 @@
 		3056E48C21DC8F5D008AEAF5 /* WeatherDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherDataManager.m; sourceTree = "<group>"; };
 		3056E4C321DDF3FB008AEAF5 /* WeatherModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherModel.h; sourceTree = "<group>"; };
 		3056E4C421DDF3FB008AEAF5 /* WeatherModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherModel.m; sourceTree = "<group>"; };
+		3056E4C621DE1238008AEAF5 /* WeatherHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherHeaderView.h; sourceTree = "<group>"; };
+		3056E4C721DE1238008AEAF5 /* WeatherHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherHeaderView.m; sourceTree = "<group>"; };
+		3056E4C921DE124F008AEAF5 /* WeatherTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherTableViewCell.h; sourceTree = "<group>"; };
+		3056E4CA21DE124F008AEAF5 /* WeatherTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherTableViewCell.m; sourceTree = "<group>"; };
+		3056E4CC21DE15FC008AEAF5 /* WeatherViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherViewModel.h; sourceTree = "<group>"; };
+		3056E4CD21DE15FC008AEAF5 /* WeatherViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherViewModel.m; sourceTree = "<group>"; };
 		A2DE2C655F6E4120EF5E4EAE /* libPods-BSMVVMDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BSMVVMDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8FCCB4ED246087BD51C687C /* Pods-BSMVVMDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BSMVVMDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BSMVVMDemo/Pods-BSMVVMDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +124,10 @@
 		3056E48121DC8D86008AEAF5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3056E4C621DE1238008AEAF5 /* WeatherHeaderView.h */,
+				3056E4C721DE1238008AEAF5 /* WeatherHeaderView.m */,
+				3056E4C921DE124F008AEAF5 /* WeatherTableViewCell.h */,
+				3056E4CA21DE124F008AEAF5 /* WeatherTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -131,6 +144,8 @@
 		3056E48321DC8D94008AEAF5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				3056E4CC21DE15FC008AEAF5 /* WeatherViewModel.h */,
+				3056E4CD21DE15FC008AEAF5 /* WeatherViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -253,6 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3056E4C821DE1238008AEAF5 /* WeatherHeaderView.m in Sources */,
+				3056E4CE21DE15FC008AEAF5 /* WeatherViewModel.m in Sources */,
+				3056E4CB21DE124F008AEAF5 /* WeatherTableViewCell.m in Sources */,
 				3056E48D21DC8F5D008AEAF5 /* WeatherDataManager.m in Sources */,
 				3056E4C521DDF3FB008AEAF5 /* WeatherModel.m in Sources */,
 				3056E47821DC6890008AEAF5 /* main.m in Sources */,

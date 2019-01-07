@@ -12,6 +12,9 @@
 
 @interface WeatherDataManager : NSObject
 
+@property (nonatomic,strong) WeatherModel* weatherModel;
+
+
 -(void)getWeatherDataWithCityName:(NSString *)cityName weahtherBlock:(void(^)(WeatherModel *weatherModel,NSString *errorMsg))block;
 
 

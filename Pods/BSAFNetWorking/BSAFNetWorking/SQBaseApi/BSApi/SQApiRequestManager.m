@@ -35,16 +35,18 @@
         _sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
         [_sessionManager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         _sessionManager.requestSerializer.timeoutInterval = 45;
-        if ([url hasSuffix:@"https://"]) {
-            [_sessionManager setSecurityPolicy:[self customSecurityPolicy]];
-        }
+//        if ([url hasSuffix:@"https://"]) {
+//            [_sessionManager setSecurityPolicy:[self customSecurityPolicy]];
+//        }
 
         //请求响应设置
         _sessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
         _sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html",@"text/json", @"text/javascript",@"text/xml",@"multipart/form-data", nil];
 
         //参数全局接收
-        self.url = url;
+        //对中文进行编码
+        NSString *encodeUrl = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,(CFStringRef)url,(CFStringRef)@"!$&'()*+,-./:;=?@_~%#[]",NULL,kCFStringEncodingUTF8));
+        self.url = encodeUrl;
         self.parameter = parameter;
         
         self.headerParam = [NSMutableDictionary dictionary];
