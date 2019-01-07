@@ -10,7 +10,7 @@
 支持pod,  使用方式 pod 'BSAFNetWorking'
 
 
-#正文<br/>
+正文<br/>
 *此观点仅是小白的我个人理解，轻喷*
 
 >一千个观众眼中有一千个哈姆雷特（There are a thousand Hamlets in a thousand people's eyes.）-- 莎士比亚
@@ -36,7 +36,7 @@ Model 全部采用 YYModel  进行解析**
 - ViewController  处理交互相关
 - View   单纯视图
 - Model    数据模型            
-- ViewModel   数据展示
+- ViewModel   数据展示
 - DataManager 数据请求、缓存处理
 
 目前由于老大的要求，我们建立了很多 Base基类 包含ViewController、Model、ViewModel、DataManager，其实View 也是有的，但是感觉没有用到，就没有用，先说下Base里做的事情
