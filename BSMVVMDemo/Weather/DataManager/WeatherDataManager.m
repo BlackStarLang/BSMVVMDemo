@@ -27,10 +27,10 @@
          demo没有导入yymodel ，所以这里手动转模型
          */
         WeatherModel *model = [[WeatherModel alloc]init];
-        model.city = response.responseObject[@"city"];
+        model.city = response.responseObject[@"data"][@"city"];
        
         NSMutableArray *mutArr = [NSMutableArray array];
-        for (NSDictionary *dic  in response.responseObject[@"forecast"]) {
+        for (NSDictionary *dic  in response.responseObject[@"data"][@"forecast"]) {
             WeatherItemModel *itemModel = [[WeatherItemModel alloc]init];
             [itemModel setValuesForKeysWithDictionary:dic];
             [mutArr addObject:itemModel];

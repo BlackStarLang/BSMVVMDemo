@@ -33,10 +33,12 @@
 
 - (void)masonryLayout{
     
+    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+
     self.dateLabel.frame = CGRectMake(20, 10, 300, 20);
-    self.temLabel.frame = CGRectMake(20, 10, 300, 20);
-    self.fengLabel.frame = CGRectMake(20, 10, 100, 20);
-    self.typeLabel.frame = CGRectMake(self.frame.size.width - 120, 10, 100, 20);
+    self.temLabel.frame = CGRectMake(20, 30, 300, 20);
+    self.fengLabel.frame = CGRectMake(20, 50, screenWidth - 40, 20);
+    self.typeLabel.frame = CGRectMake(screenWidth - 120, 10, 100, 20);
 }
 
 

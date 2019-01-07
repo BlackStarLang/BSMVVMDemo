@@ -17,7 +17,7 @@
 #import "WeatherModel.h"
 #import "WeatherViewModel.h"
 
-@interface WeatherViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface WeatherViewController ()<UITableViewDelegate,UITableViewDataSource,WeatherHeaderViewDelegate>
 
 /*view*/
 @property (nonatomic,strong) UITableView *tableView;
@@ -64,6 +64,8 @@
         if (errorMsg) {
             NSLog(@"%@",errorMsg);
         }else{
+            WeatherItemModel *itemModel = [weatherModel.forecast firstObject];
+            [weakSelf.viewModel weatherViewModelDisplayHeaderView:weakSelf.headerView weatherModel:itemModel];
             [weakSelf.tableView reloadData];
         }
     }];
@@ -85,12 +87,16 @@
     
     //因为是demo，没有导入masonry，暂时用frame 代替
     self.tableView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-    self.headerView.frame = CGRectMake(0, 0, self.view.frame.size.width, 200);
+    self.headerView.frame = CGRectMake(0, 0, self.view.frame.size.width, 260);
 }
 
 
 #pragma mark - Action&PrivateDelegate
 
+-(void)weatherHeaderViewRefreshBtnClick{
+    [self.headerView.refreshBtn setTitle:@"刷新中..." forState:UIControlStateNormal];
+    [self requestData];
+}
 
 #pragma mark - SystemDelegate
 
@@ -134,6 +140,7 @@
         _tableView.estimatedRowHeight = 0;
         _tableView.estimatedSectionFooterHeight = 0;
         _tableView.estimatedSectionHeaderHeight = 0;
+        _tableView.tableFooterView = [UIView new];
     }
     return _tableView;
 }
@@ -141,6 +148,7 @@
 -(WeatherHeaderView *)headerView{
     if (!_headerView) {
         _headerView = [[WeatherHeaderView alloc]init];
+        _headerView.delegate = self;
     }
     return _headerView;
 }
