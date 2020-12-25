@@ -1,5 +1,5 @@
 # BSMVVMDemo
-架构初探，你以为是你见过的MVVM ?     不！只是我自己的MVVM <br/>
+架构初探，如何设计一个简单的架构 <br/>
 
 这套方案使用的依赖三方是：BSAFNetWorking,Masonry，YYModel,<br/>
 如果不使用Masonry和YYModel 开发成本会很高，<br/>
